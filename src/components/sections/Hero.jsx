@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 import { Button } from '../ui/Button';
+import resumePdf from '../../assets/JashwanthReddy-Webdeveloper.pdf';
 
 export const Hero = () => {
     return (
@@ -24,9 +25,9 @@ export const Hero = () => {
                         <span className="text-primary dark:text-white">Jashwanth Reddy</span>
                     </h1>
                     <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto">
-                        Cyber Security Student | Ethical Hacker | Web Developer
+                        Computer Science Engineer | Full-Stack Developer | Cybersecurity Student
                         <br />
-                        Specializing in cyber defense, cloud computing (AWS), and secure coding.
+                        Specializing in React, FastAPI, MySQL, and cloud-hosted solutions.
                     </p>
                 </motion.div>
 
@@ -36,14 +37,16 @@ export const Hero = () => {
                     transition={{ delay: 0.2, duration: 0.4 }}
                     className="flex flex-col sm:flex-row gap-4 min-w-[200px]"
                 >
-                    <Button size="lg" className="group">
+                    <Button size="lg" className="group" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
                         View Projects
                         <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Button>
-                    <Button variant="outline" size="lg">
-                        Download CV
-                        <Download className="ml-2 h-4 w-4" />
-                    </Button>
+                    <a href={resumePdf} download="JashwanthReddy-Webdeveloper.pdf" target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" size="lg" tabIndex={-1} className="w-full">
+                            Download CV
+                            <Download className="ml-2 h-4 w-4" />
+                        </Button>
+                    </a>
                 </motion.div>
             </div>
         </section>

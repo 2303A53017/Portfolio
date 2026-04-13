@@ -27,7 +27,7 @@ export const Navbar = () => {
                 <div className="flex justify-between items-center h-16">
                     <div className="flex-shrink-0 flex items-center">
                         <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 dark:from-white dark:to-white/80">
-                            Jashwanth Reddy
+                            JashwanthReddy.Dev
                         </span>
                     </div>
 

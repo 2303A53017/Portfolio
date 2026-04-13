@@ -6,24 +6,28 @@ import { Card } from '../ui/Card';
 
 const skills = [
     {
-        category: "Languages",
-        items: ["Java", "Python", "C", "C++", "JavaScript", "SQL"],
+        category: "Operating Systems",
+        items: ["Kali Linux", "Ubuntu", "Mac/Windows"],
+        icon: <Code className="h-6 w-6 text-primary" />,
+    },{
+        category: "Programming Languages",
+        items: ["Python", "Java", "JavaScript"],
         icon: <Code className="h-6 w-6 text-primary" />,
     },
     {
+        category: "Web & Database",
+        items: ["React.js", "FastAPI", "Node.js", "MySQL", "HTML5/CSS3", "REST API Design"],
+        icon: <Layout className="h-6 w-6 text-primary" />,
+    },
+    {
         category: "Cybersecurity",
-        items: ["Ethical Hacking", "Vulnerability Assessment", "Penetration Testing", "Burp Suite", "Wireshark", "Kali Linux"],
+        items: ["Network Sniffing", "Port Scanning", "Information Gathering"],
         icon: <Terminal className="h-6 w-6 text-primary" />,
     },
     {
-        category: "Cloud & Dev",
-        items: ["AWS", "Elastic Beanstalk", "Full Stack Dev", "React", "Node.js", "Palo Alto Labs"],
-        icon: <Cloud className="h-6 w-6 text-primary" />,
-    },
-    {
-        category: "Soft Skills",
-        items: ["Problem Solving", "Team Leadership", "Secure Coding", "Communication", "Adaptability"],
-        icon: <Layout className="h-6 w-6 text-primary" />,
+        category: "Tools",
+        items: ["VS Code", "Postman", "GitHub", "Wireshark", "Nmap", "Burp Suite", "Maltego"],
+        icon: <Monitor className="h-6 w-6 text-primary" />,
     },
 ];
 

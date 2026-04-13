@@ -11,17 +11,54 @@ export const Contact = () => {
         email: '',
         message: ''
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [status, setStatus] = useState('');
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
-        // Ideally, send data to backend or service like EmailJS
-        alert('Message sent! (Simulated)');
-        setFormData({ name: '', email: '', message: '' });
+        setIsSubmitting(true);
+        setStatus('');
+
+        // EmailJS Configuration
+        const SERVICE_ID = 'service_vtva98r';
+        const TEMPLATE_ID = 'template_7pepsah';
+        const PUBLIC_KEY = 'FvzuQWq15Gx2R54NQ';
+
+        try {
+            const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    service_id: SERVICE_ID,
+                    template_id: TEMPLATE_ID,
+                    user_id: PUBLIC_KEY,
+                    template_params: {
+                        name: formData.name,
+                        email: formData.email,
+                        message: formData.message,
+                    }
+                })
+            });
+
+            if (response.ok) {
+                setStatus('Message sent successfully!');
+                setFormData({ name: '', email: '', message: '' });
+                setTimeout(() => setStatus(''), 5000);
+            } else {
+                setStatus('Failed to send message. Did you replace YOUR_TEMPLATE_ID?');
+            }
+        } catch (error) {
+            console.error(error);
+            setStatus('An error occurred. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -83,9 +120,14 @@ export const Contact = () => {
                         </div>
 
                         <div className="flex gap-4">
-                            <Button variant="outline" size="icon" className="rounded-full w-12 h-12" asChild>
-                                <a href="https://github.com/jashwanthreddy21" target="_blank" rel="noopener noreferrer">
+                            <Button variant="outline" size="icon" className="rounded-full w-12 h-12 hover:text-primary transition-colors hover:border-primary" asChild>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
                                     <Github className="w-5 h-5" />
+                                </a>
+                            </Button>
+                            <Button variant="outline" size="icon" className="rounded-full w-12 h-12 hover:text-primary transition-colors hover:border-primary" asChild>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                                    <Linkedin className="w-5 h-5" />
                                 </a>
                             </Button>
                         </div>
@@ -147,10 +189,16 @@ export const Contact = () => {
                                     />
                                 </div>
 
-                                <Button type="submit" className="w-full group">
-                                    Send Message
+                                <Button type="submit" className="w-full group" disabled={isSubmitting}>
+                                    {isSubmitting ? 'Sending...' : 'Send Message'}
                                     <Send className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                                 </Button>
+
+                                {status && (
+                                    <p className={`text-center text-sm font-medium ${status.includes('success') ? 'text-green-500' : 'text-red-500'}`}>
+                                        {status}
+                                    </p>
+                                )}
                             </form>
                         </Card>
                     </motion.div>

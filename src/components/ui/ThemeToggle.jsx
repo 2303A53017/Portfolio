@@ -4,7 +4,16 @@ import { Moon, Sun } from 'lucide-react';
 import { Button } from './Button';
 
 export const ThemeToggle = () => {
-    const [theme, setTheme] = useState('dark'); // Default to dark mode for "tech" feel
+    const [theme, setTheme] = useState(() => {
+        if (typeof window !== 'undefined') {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) return savedTheme;
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                return 'dark';
+            }
+        }
+        return 'light';
+    });
 
     useEffect(() => {
         const root = window.document.documentElement;
@@ -13,6 +22,7 @@ export const ThemeToggle = () => {
         } else {
             root.classList.remove('dark');
         }
+        localStorage.setItem('theme', theme);
     }, [theme]);
 
     const toggleTheme = () => {

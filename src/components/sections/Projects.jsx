@@ -7,28 +7,68 @@ import { Button } from '../ui/Button';
 
 const projects = [
     {
-        title: "Malware Detector",
-        description: "A Python-based tool that detects malicious URLs and files using blacklist checks and heuristic analysis methods.",
-        technologies: ["Python", "Heuristic Analysis", "Security"],
+        title: "Full-Stack E-Commerce Platform",
+        description: "Architected an e-commerce platform with JWT authentication and role-based access control (RBAC). Optimized MySQL schema cutting query time by 35%.",
+        technologies: ["React.js", "FastAPI", "MySQL", "AWS EC2"],
         github: "#",
         live: "#",
-        color: "from-red-500/20 to-orange-500/20"
+        color: "from-blue-500/20 to-indigo-500/20"
     },
     {
-        title: "Vulnerability Scanner",
-        description: "Built a port scanner in Python to identify weak network services and potential vulnerabilities in target systems.",
-        technologies: ["Python", "Networking", "Port Scanning"],
-        github: "#",
-        live: "#",
-        color: "from-blue-500/20 to-cyan-500/20"
-    },
-    {
-        title: "Secure Cloud Web App",
-        description: "Designed a scalable web application deployed on AWS Elastic Beanstalk, focusing on performance and security optimization.",
-        technologies: ["AWS", "Elastic Beanstalk", "EC2", "Full Stack"],
+        title: "Task Manager Application",
+        description: "Engineered a task tracking system with CRUD endpoints, enabling real-time UI updates. Structured a normalized database schema boosting retrieval speed by 40%.",
+        technologies: ["FastAPI", "React.js", "Normalized DB", "REST API"],
         github: "#",
         live: "#",
         color: "from-emerald-500/20 to-green-500/20"
+    },
+    {
+        title: "Personal Portfolio Website",
+        description: "Developed a mobile-first React portfolio with third-party APIs and CSS animations. Achieved WCAG accessibility compliance and multi-browser support.",
+        technologies: ["React.js", "CSS Animations", "Performance", "UI Testing"],
+        github: "#",
+        live: "#",
+        color: "from-orange-500/20 to-red-500/20"
+    },
+    {
+        title: "Weather Dashboard",
+        description: "A responsive web application that fetches real-time weather data and air quality metrics using OpenWeatherMap API. Designed to visualize 5-day forecasts with clean UI.",
+        technologies: ["JavaScript", "APIs", "Frontend"],
+        github: "#",
+        live: "https://weather-website-kag0.onrender.com",
+        color: "from-cyan-500/20 to-blue-500/20"
+    },
+    {
+        title: "Malware URL Scanner",
+        description: "A web app that scans URLs for malware signatures and phishing threats using the VirusTotal API. Includes logging and threat classification display.",
+        technologies: ["Web App", "VirusTotal API", "Security"],
+        github: "#",
+        live: "https://malware-scanner-1.onrender.com",
+        color: "from-red-500/20 to-orange-500/20"
+    },
+    {
+        title: "Malware File Scanner",
+        description: "A web-based malware scanner that allows users to upload files and scan them against VirusTotal. The UI gives a clear risk rating and hash output.",
+        technologies: ["Web App", "Hashing", "VirusTotal API"],
+        github: "#",
+        live: "https://file-malware-scanner-18g2.onrender.com/",
+        color: "from-purple-500/20 to-pink-500/20"
+    },
+    {
+        title: "Zombie Survival Game",
+        description: "An immersive open-world survival game where players explore, gather resources, and overcome challenges to stay alive.",
+        technologies: ["Game Development", "Survival Strategy"],
+        github: "https://github.com/jashwanthreddy21/GMDD-Zombie-Game.git",
+        live: "#",
+        color: "from-green-500/20 to-emerald-500/20"
+    },
+    {
+        title: "Phishing Mail Detector",
+        description: "A client-side web application that analyzes emails for phishing indicators. Evaluates sender domains, links, keywords, and attachments.",
+        technologies: ["HTML", "CSS", "JavaScript", "Security"],
+        github: "#",
+        live: "https://jashwanthreddy21.github.io/Phishing-Mail-Detector/",
+        color: "from-yellow-500/20 to-amber-500/20"
     }
 ];
 
