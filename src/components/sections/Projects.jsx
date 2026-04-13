@@ -69,6 +69,14 @@ const projects = [
         github: "#",
         live: "https://jashwanthreddy21.github.io/Phishing-Mail-Detector/",
         color: "from-yellow-500/20 to-amber-500/20"
+    },
+    {
+        title: "Smart Pincode Finder",
+        description: "Developed a Smart Pincode Finder that retrieves accurate postal codes using real-time location, map pinning, and place search via geolocation and reverse geocoding APIs.",
+        technologies: ["HTML", "CSS", "JavaScript", "Restfull APIs"],
+        github: "https://github.com/jashwanthreddy21/Smart-Pincode-Finder",
+        live: "https://jashwanthreddy21.github.io/Smart-Pincode-Finder/",
+        color: "from-yellow-500/20 to-amber-500/20"
     }
 ];
 
