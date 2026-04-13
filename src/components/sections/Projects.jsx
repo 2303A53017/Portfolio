@@ -26,7 +26,7 @@ const projects = [
         title: "Personal Portfolio Website",
         description: "Developed a mobile-first React portfolio with third-party APIs and CSS animations. Achieved WCAG accessibility compliance and multi-browser support.",
         technologies: ["React.js", "CSS Animations", "Performance", "UI Testing"],
-        github: "https://github.com/jashwanthreddy21/Portfolio.git",
+        github: "https://github.com/jashwanthreddy21/Portfolio1.git",
         live: "https://jashwanthreddy.me",
         color: "from-orange-500/20 to-red-500/20"
     },
@@ -34,7 +34,7 @@ const projects = [
         title: "Weather Dashboard",
         description: "A responsive web application that fetches real-time weather data and air quality metrics using OpenWeatherMap API. Designed to visualize 5-day forecasts with clean UI.",
         technologies: ["JavaScript", "APIs", "Frontend"],
-        github: "#",
+        github: "https://github.com/jashwanthreddy21/weather-website",
         live: "https://weather-website-kag0.onrender.com",
         color: "from-cyan-500/20 to-blue-500/20"
     },
@@ -42,7 +42,7 @@ const projects = [
         title: "Malware URL Scanner",
         description: "A web app that scans URLs for malware signatures and phishing threats using the VirusTotal API. Includes logging and threat classification display.",
         technologies: ["Web App", "VirusTotal API", "Security"],
-        github: "#",
+        github: "https://github.com/jashwanthreddy21/malware-scanner",
         live: "https://malware-scanner-1.onrender.com",
         color: "from-red-500/20 to-orange-500/20"
     },
@@ -50,7 +50,7 @@ const projects = [
         title: "Malware File Scanner",
         description: "A web-based malware scanner that allows users to upload files and scan them against VirusTotal. The UI gives a clear risk rating and hash output.",
         technologies: ["Web App", "Hashing", "VirusTotal API"],
-        github: "#",
+        github: "https://github.com/jashwanthreddy21/File-malware-scanner",
         live: "https://file-malware-scanner-18g2.onrender.com/",
         color: "from-purple-500/20 to-pink-500/20"
     },
@@ -66,7 +66,7 @@ const projects = [
         title: "Phishing Mail Detector",
         description: "A client-side web application that analyzes emails for phishing indicators. Evaluates sender domains, links, keywords, and attachments.",
         technologies: ["HTML", "CSS", "JavaScript", "Security"],
-        github: "#",
+        github: "https://github.com/jashwanthreddy21/Phishing-Mail-Detector",
         live: "https://jashwanthreddy21.github.io/Phishing-Mail-Detector/",
         color: "from-yellow-500/20 to-amber-500/20"
     },
