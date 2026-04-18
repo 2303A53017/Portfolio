@@ -10,8 +10,8 @@ const projects = [
         title: "Full-Stack E-Commerce Platform",
         description: "Architected an e-commerce platform with JWT authentication and role-based access control (RBAC). Optimized MySQL schema cutting query time by 35%.",
         technologies: ["React.js", "FastAPI", "MySQL", "AWS EC2"],
-        github: "#",
-        live: "#",
+        github: "https://github.com/jashwanthreddy21/E-commerce-website.git",
+        live: "https://e-commerce-website-six-gules.vercel.app/",
         color: "from-blue-500/20 to-indigo-500/20"
     },
     {
