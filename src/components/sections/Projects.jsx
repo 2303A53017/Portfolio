@@ -26,7 +26,7 @@ const projects = [
         title: "Personal Portfolio Website",
         description: "Developed a mobile-first React portfolio with third-party APIs and CSS animations. Achieved WCAG accessibility compliance and multi-browser support.",
         technologies: ["React.js", "CSS Animations", "Performance", "UI Testing"],
-        github: "https://github.com/jashwanthreddy21/Portfolio1.git",
+        github: "https://github.com/2303A53017/Portfolio.git",
         live: "https://jashwanthreddy.me",
         color: "from-orange-500/20 to-red-500/20"
     },
